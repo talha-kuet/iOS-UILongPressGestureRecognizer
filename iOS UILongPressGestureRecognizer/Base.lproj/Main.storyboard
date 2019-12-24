@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c19-eI-zIJ">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS_UILongPressGestureRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Zu1-qW-Krn">
+                                <rect key="frame" x="0.0" y="108.5" width="375" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="IZt-HV-VVa"/>
+                                </constraints>
+                            </progressView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Voh-Qe-JDe">
+                                <rect key="frame" x="87.5" y="308.5" width="200" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Press Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhU-0b-jsd">
+                                        <rect key="frame" x="34.5" y="14.5" width="131" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="OnW-M1-iwk"/>
+                                    <constraint firstAttribute="height" constant="50" id="YKg-Eg-Rcm"/>
+                                    <constraint firstItem="BhU-0b-jsd" firstAttribute="centerX" secondItem="Voh-Qe-JDe" secondAttribute="centerX" id="kpg-ni-6ha"/>
+                                    <constraint firstItem="BhU-0b-jsd" firstAttribute="centerY" secondItem="Voh-Qe-JDe" secondAttribute="centerY" id="xNx-YU-X70"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arcProgressBar" translatesAutoresizingMaskIntoConstraints="NO" id="HUp-1O-9J0">
+                                <rect key="frame" x="0.0" y="108.5" width="375" height="100"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HUp-1O-9J0" firstAttribute="trailing" secondItem="Zu1-qW-Krn" secondAttribute="trailing" id="1sb-kL-HTR"/>
+                            <constraint firstItem="HUp-1O-9J0" firstAttribute="height" secondItem="Zu1-qW-Krn" secondAttribute="height" id="4Eq-lE-ofh"/>
+                            <constraint firstItem="Voh-Qe-JDe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4os-iG-V8r"/>
+                            <constraint firstAttribute="trailing" secondItem="Zu1-qW-Krn" secondAttribute="trailing" id="8lj-br-XHD"/>
+                            <constraint firstItem="HUp-1O-9J0" firstAttribute="top" secondItem="Zu1-qW-Krn" secondAttribute="top" id="Rhr-O7-ySr"/>
+                            <constraint firstItem="Voh-Qe-JDe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TC1-tb-29z"/>
+                            <constraint firstItem="HUp-1O-9J0" firstAttribute="leading" secondItem="Zu1-qW-Krn" secondAttribute="leading" id="Wt2-yN-NZM"/>
+                            <constraint firstItem="Voh-Qe-JDe" firstAttribute="top" secondItem="Zu1-qW-Krn" secondAttribute="bottom" constant="100" id="fM7-KK-mXY"/>
+                            <constraint firstItem="Zu1-qW-Krn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="y9E-1f-Pa5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IoR-N1-ied"/>
+                    <connections>
+                        <outlet property="longPressView" destination="Voh-Qe-JDe" id="KMn-IJ-cFz"/>
+                        <outlet property="progressBar" destination="Zu1-qW-Krn" id="V2j-cM-9DT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071.2" y="138.98050974512745"/>
+        </scene>
+        <!--Next View Controller-->
+        <scene sceneID="zOJ-nq-TpG">
+            <objects>
+                <viewController storyboardIdentifier="NextViewController" id="PGz-vE-plb" customClass="NextViewController" customModule="iOS_UILongPressGestureRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zpn-PA-u4w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="5mn-YS-d1Z"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NYz-5x-RuL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1720.8" y="136.28185907046478"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XkZ-Sv-imA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c19-eI-zIJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uOa-Qc-kaq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="P8Y-dW-gpE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DkJ-lU-iWV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="362" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arcProgressBar" width="600" height="300"/>
+    </resources>
+</document>
